@@ -2,18 +2,16 @@ package com.tsuyama.springSecurity.models;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "tb_pessoa")
 public class PessoaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
     private String nome;
-
-
-    public PessoaModel() {
-    }
 
     public String getNome() {
         return nome;
@@ -23,11 +21,11 @@ public class PessoaModel {
         this.nome = nome;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 }
