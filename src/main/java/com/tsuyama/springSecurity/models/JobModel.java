@@ -14,6 +14,6 @@ public class JobModel {
     private UID id;
     private String nome;
     @OneToMany
-    private List<JobModel> jobs;
+    private List<PessoaModel> pessoaModels;
 
 }

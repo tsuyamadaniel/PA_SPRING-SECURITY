@@ -2,6 +2,7 @@ package com.tsuyama.springSecurity.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -12,6 +13,8 @@ public class PessoaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
     private String nome;
+    @OneToMany
+    private List<JobModel> jobs;
 
     public String getNome() {
         return nome;
